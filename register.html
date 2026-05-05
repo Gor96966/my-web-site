@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>Գրանցում - GYM.AM</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .reg-card {
+            background-color: #111;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #ff3e3e;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 62, 62, 0.2);
+        }
+        h2 { color: #ff3e3e; letter-spacing: 2px; margin-bottom: 25px; }
+        
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #888;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #ff3e3e;
+            box-shadow: 0 0 5px rgba(255, 62, 62, 0.5);
+        }
+        .send-btn {
+            background-color: #ff3e3e;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .send-btn:hover {
+            background-color: #cc2b2b;
+            transform: translateY(-2px);
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover { color: #fff; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="reg-card">
+        <h2>ԳՐԱՆՑՈՒՄ</h2>
+        <form>
+            <div class="input-group">
+                <label>Անուն Ազգանուն</label>
+                <input type="text" placeholder="Օրինակ՝ Արամ Արամյան" required>
+            </div>
+            
+            <div class="input-group">
+                <label>Հեռախոսահամար</label>
+                <input type="tel" placeholder="+374 __ __ __ __" required>
+            </div>
+
+            <div class="input-group">
+                <label>Էլ. Փոստ (Email)</label>
+                <input type="email" placeholder="example@mail.com" required>
+            </div>
+
+            <button type="submit" class="send-btn">ՈՒՂԱՐԿԵԼ</button>
+        </form>
+        <a href="/" class="back-link">← Հետ դեպի գլխավոր</a>
+    </div>
+</body>
+</html>
