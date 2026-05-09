@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM.AM </title>
+    
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 100px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 90px;
+            background-color: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            box-sizing: border-box;
+            border-bottom: 2px solid #ff3e3e;
+        }
+
+        .main-logo { height: 60px; }
+
+        .join-btn {
+            background-color: #ff3e3e;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .join-btn:hover { background-color: #cc2b2b; }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 380px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #ff3e3e;
+            transition: 0.4s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 62, 62, 0.5);
+        }
+
+        /* Footer-ի թարմացված դիզայնը */
+        .main-footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 5%;
+            border-top: 2px solid #ff3e3e;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-info div {
+            font-size: 16px;
+        }
+
+        .footer-info span {
+            color: #ff3e3e;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="main-logo">
+        <a href="/register" class="join-btn">ԳՐԱՆՑՎԵԼ</a>
+    </header>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='pic1.jpg') }}">
+        <img src="{{ url_for('static', filename='pic2.jpg') }}">
+        <img src="{{ url_for('static', filename='pic3.jpg') }}">
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <div>
+                <span>ՀԱՍՑԵ</span>
+                Հայաստան, ք․ Երևան, Աբովյան 1
+            </div>
+            <div>
+                <span>ՀԵՌԱԽՈՍ</span>
+                +374 99 00 00 00
+            </div>
+            <div>
+                <span>ԱՇԽԱՏԱՆՔԱՅԻՆ ԺԱՄԵՐ</span>
+                Երկ - Շաբ: 08:00 - 22:00
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GYM.AM - Բոլոր իրավունքները պաշտպանված են</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+<div style="background: #1a1a1a; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h2 style="color: #ff3e3e;">Մեր մասին</h2>
+    <p>Մենք լավագույն մարզասրահն ենք քաղաքում...</p>
+</div>
+<h2 style="color: #ff3e3e; text-align: center; margin-top: 50px;">ՄԵՐ ՓԱԹԵԹՆԵՐԸ</h2>
+
+<div class="pricing-container">
+    <div class="price-card">
+        <h3>ԷԿՈՆՈՄ</h3>
+        <div class="price">15,000 ֏</div>
+        <ul>
+            <li>8 այցելություն</li>
+            <li>Լողավազան չկա</li>
+            <li>Մարզիչ չկա</li>
+        </ul>
+        <button class="order-btn">ԸՆՏՐԵԼ</button>
+    </div>
+
+    <div class="price-card" style="border-color: #ff3e3e;">
+        <h3>ՍՏԱՆԴԱՐՏ</h3>
+        <div class="price">25,000 ֏</div>
+        <ul>
+            <li>Անսահմանափակ այց</li>
+            <li>Լողավազան (2 ժամ)</li>
+            <li>1 անվճար մարզում</li>
+        </ul>
+        <button class="order-btn">ԸՆՏՐԵԼ</button>
+    </div>
+
+    <div class="price-card">
+        <h3>VIP</h3>
+        <div class="price">40,000 ֏</div>
+        <ul>
+            <li>Անսահմանափակ այց</li>
+            <li>Անհատական մարզիչ</li>
+            <li>Սաունա և Լողավազան</li>
+        </ul>
+        <button class="order-btn">ԸՆՏՐԵԼ</button>
+    </div>
+</div>
+<style>
+    /* Այստեղ պետք է լինի քո ամբողջ CSS-ը */
+    .footer {
+        background-color: #0a0a0a;
+    }
+</style> ```
+<footer style="background-color: #0a0a0a; color: red; padding: 40px; text-align: center; border-top: 2px solid #333; width: 100%; margin-top: 50px;">
+    <h3 style="color: #ff3e3e;"> <GYM.AM></> </h3> 
+     <footer class="main-footer">
+        <div class="footer-info">
+            <div>
+                <span>ՄԵՐ ՀԱՍՑԵն </span>
+            
+            </div>   
+    <p style="color: #888;">📍Հայաստան, ք․ Երևան, Աբովյան 1 </p>
+         
+    <p style="color: #888;">📞 +374 (99) 00-00-00</p>
+    <div style="margin-top: 15px;">
+        <a href="#" style="color: #ff3e3e; text-decoration: none; margin: 0 10px;">INSTAGRAM</a>
+        <a href="#" style="color: #ff3e3e; text-decoration: none; margin: 0 10px;">FACEBOOK</a>
+    </div>
+
+</footer>
